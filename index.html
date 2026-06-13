@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portofolio pribadi mahasiswa Informatika – Web Developer, UI/UX Designer, dan System Developer yang berfokus pada Laravel, sistem real-time, dan desain antarmuka modern." />
+  <meta name="keywords" content="portofolio, web developer, UI/UX designer, Laravel, informatika, mahasiswa" />
+  <meta name="author" content="Fifel" />
+  <meta name="theme-color" content="#f8f9fa" id="themeColorMeta" />
+  <title>Fifel — Web Developer & UI/UX Designer</title>
+  
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Background Effects -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow--purple"></div>
+  <div class="bg-glow bg-glow--pink"></div>
+  <div class="bg-glow bg-glow--cyan"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__logo">&lt;Fifel<span>/&gt;</span></a>
+      <div class="navbar__menu" id="navMenu">
+        <a href="#about" class="navbar__link" data-section="about">Tentang</a>
+        <a href="#skills" class="navbar__link" data-section="skills">Keahlian</a>
+        <a href="#experience" class="navbar__link" data-section="experience">Pengalaman</a>
+        <a href="#projects" class="navbar__link" data-section="projects">Proyek</a>
+        <a href="#contact" class="navbar__link" data-section="contact">Kontak</a>
+      </div>
+      <div class="navbar__actions">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="#contact" class="navbar__cta desktop-only">Hubungi Saya</a>
+        <div class="navbar__burger" id="navBurger" aria-label="Toggle menu" role="button" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" data-section="about">Tentang</a>
+    <a href="#skills" data-section="skills">Keahlian</a>
+    <a href="#experience" data-section="experience">Pengalaman</a>
+    <a href="#projects" data-section="projects">Proyek</a>
+    <a href="#contact" data-section="contact">Kontak</a>
+  </div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="container hero__content">
+      <div class="hero__text">
+        <div class="hero__badge reveal">
+          <span class="dot"></span>
+          Tersedia untuk kolaborasi
+        </div>
+        <p class="hero__greeting reveal reveal--delay-1">Halo, saya</p>
+        <h1 class="hero__name reveal reveal--delay-1">
+          <span class="gradient-text">Fifel</span>
+        </h1>
+        <h2 class="hero__title reveal reveal--delay-2">
+          <span class="typed-text" id="typedText"></span><span class="typed-cursor">|</span>
+        </h2>
+        <p class="hero__desc reveal reveal--delay-3">
+          Mahasiswa Informatika tingkat akhir yang bersemangat membangun
+          pengalaman digital yang indah, fungsional, dan berdampak.
+          Menggabungkan kode dengan kreativitas untuk solusi nyata.
+        </p>
+        <div class="hero__actions reveal reveal--delay-4">
+          <a href="#projects" class="btn btn--primary">
+            Lihat Proyek
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#" class="btn btn--outline">
+            <i class="fa-solid fa-download" style="margin-right: 6px;"></i> Unduh CV
+          </a>
+          <a href="#contact" class="btn btn--outline">
+            Hubungi Saya
+          </a>
+        </div>
+        <div class="hero__stats reveal reveal--delay-5">
+          <div class="stat">
+            <div class="stat__number" data-target="15" data-suffix="+">0</div>
+            <div class="stat__label">Proyek</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number" data-target="3" data-suffix="+">0</div>
+            <div class="stat__label">Tahun Belajar</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number" data-target="8" data-suffix="+">0</div>
+            <div class="stat__label">Teknologi</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal">
+        <div class="hero__avatar-container">
+          <div class="hero__avatar-ring"></div>
+          <div class="hero__avatar-ring hero__avatar-ring--2"></div>
+          <div class="hero__avatar">
+            <span class="hero__avatar-placeholder"><i class="fa-solid fa-user-astronaut"></i></span>
+          </div>
+          <div class="hero__float-badge">
+            <i class="fa-brands fa-laravel"></i> Laravel
+          </div>
+          <div class="hero__float-badge">
+            <i class="fa-solid fa-palette"></i> UI/UX
+          </div>
+          <div class="hero__float-badge">
+            <i class="fa-solid fa-code"></i> Full-Stack
+          </div>
+          <div class="hero__float-badge">
+            <i class="fa-solid fa-bolt"></i> Real-Time
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Tentang Saya</span>
+        <h2 class="section-title">Mengenal Lebih <span class="gradient-text">Dekat</span></h2>
+        <p class="section-desc">Cerita di balik kode dan desain yang saya buat setiap hari.</p>
+      </div>
+      <div class="about__content">
+        <div class="about__image-area reveal">
+          <div class="about__image-card">
+            <span class="about__image-placeholder"><i class="fa-solid fa-laptop-code"></i></span>
+          </div>
+          <div class="about__exp-badge">
+            <div class="number">3+</div>
+            <div class="label">Tahun Pengalaman</div>
+          </div>
+        </div>
+        <div class="about__info">
+          <h3 class="reveal">Membangun Sistem Nyata &<br/>Pengalaman Berdampak</h3>
+          <p class="reveal reveal--delay-1">
+            Sebagai seorang mahasiswa Informatika, perjalanan saya tidak hanya sebatas teori di dalam kelas. Saya memiliki ketertarikan yang mendalam terhadap pengembangan sistem informasi dan bagaimana teknologi dapat memecahkan masalah dunia nyata secara efisien.
+          </p>
+          <p class="reveal reveal--delay-2">
+            Melalui berbagai pengalaman dalam membangun proyek nyata, mulai dari aplikasi skala kecil hingga sistem manajemen terintegrasi, saya telah memadukan logika *backend* yang kokoh dengan kreativitas *frontend*. Saya selalu terdorong oleh keinginan yang kuat untuk terus belajar, beradaptasi dengan alat baru, dan terus berkembang dalam industri yang dinamis ini.
+          </p>
+          <div class="about__details reveal reveal--delay-3">
+            <div class="detail-item">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <div class="info">
+                <div class="label">Pendidikan</div>
+                <div class="value">S1 Informatika</div>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div class="info">
+                <div class="label">Lokasi</div>
+                <div class="value">Indonesia</div>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fa-solid fa-briefcase"></i>
+              <div class="info">
+                <div class="label">Fokus</div>
+                <div class="value">Web & UI/UX</div>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fa-solid fa-globe"></i>
+              <div class="info">
+                <div class="label">Bahasa</div>
+                <div class="value">Indonesia, English</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Keahlian</span>
+        <h2 class="section-title">Teknologi & <span class="gradient-text">Kemampuan</span></h2>
+        <p class="section-desc">Alat dan teknologi yang saya gunakan untuk membangun solusi digital.</p>
+      </div>
+      <div class="skills__grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <!-- Skill 1: Frontend -->
+        <div class="skill-card reveal">
+          <div class="skill-card__icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3 class="skill-card__title">Frontend</h3>
+          <p class="skill-card__desc">Membangun antarmuka web interaktif.</p>
+          
+          <div class="skill-progress">
+            <div class="skill-progress__header">
+              <span>HTML</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-progress__bar-bg">
+              <div class="skill-progress__bar-fill" data-width="90"></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div class="skill-progress__header">
+              <span>CSS</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-progress__bar-bg">
+              <div class="skill-progress__bar-fill" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div class="skill-progress__header">
+              <span>JavaScript</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-progress__bar-bg">
+              <div class="skill-progress__bar-fill" data-width="80"></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div class="skill-progress__header">
+              <span>Bootstrap</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-progress__bar-bg">
+              <div class="skill-progress__bar-fill" data-width="85"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 2: Backend -->
+        <div class="skill-card reveal reveal--delay-1">
+          <div class="skill-card__icon"><i class="fa-solid fa-server"></i></div>
+          <h3 class="skill-card__title">Backend</h3>
+          <p class="skill-card__desc">Logika bisnis dan manajemen data.</p>
+          
+          <div class="skill-progress">
+            <div class="skill-progress__header">
+              <span>PHP</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-progress__bar-bg">
+              <div class="skill-progress__bar-fill" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div class="skill-progress__header">
+              <span>Laravel</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-progress__bar-bg">
+              <div class="skill-progress__bar-fill" data-width="90"></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div class="skill-progress__header">
+              <span>MySQL</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-progress__bar-bg">
+              <div class="skill-progress__bar-fill" data-width="85"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 3: Tools -->
+        <div class="skill-card reveal reveal--delay-2">
+          <div class="skill-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3 class="skill-card__title">Tools</h3>
+          <p class="skill-card__desc">Alat pendukung alur kerja pengembangan.</p>
+          
+          <div class="skill-progress">
+            <div class="skill-progress__header">
+              <span>Git</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-progress__bar-bg">
+              <div class="skill-progress__bar-fill" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div class="skill-progress__header">
+              <span>GitHub</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-progress__bar-bg">
+              <div class="skill-progress__bar-fill" data-width="90"></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div class="skill-progress__header">
+              <span>Docker</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-progress__bar-bg">
+              <div class="skill-progress__bar-fill" data-width="70"></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div class="skill-progress__header">
+              <span>Figma</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-progress__bar-bg">
+              <div class="skill-progress__bar-fill" data-width="80"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Pengalaman</span>
+        <h2 class="section-title">Perjalanan <span class="gradient-text">Karir</span></h2>
+        <p class="section-desc">Milestone dan pencapaian dalam perjalanan saya sebagai developer.</p>
+      </div>
+      <div class="timeline">
+        <!-- Timeline Item 1 -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__date">2026</div>
+            <h3 class="timeline__title">Membangun Portofolio Profesional</h3>
+            <p class="timeline__desc">Menyusun dan mengembangkan portofolio modern untuk menampilkan keahlian, proyek, dan pengalaman secara profesional.</p>
+          </div>
+        </div>
+        <!-- Timeline Item 2 -->
+        <div class="timeline__item reveal reveal--delay-1">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__date">2026</div>
+            <h3 class="timeline__title">Menyelesaikan Tugas Akhir</h3>
+            <p class="timeline__desc">Mengembangkan Sistem Informasi Tugas Akhir (SITA) sebagai pencapaian puncak perkuliahan.</p>
+          </div>
+        </div>
+        <!-- Timeline Item 3 -->
+        <div class="timeline__item reveal reveal--delay-2">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__date">2025</div>
+            <h3 class="timeline__title">Mengembangkan Sistem Presensi Barcode</h3>
+            <p class="timeline__desc">Membangun solusi absensi terintegrasi secara real-time untuk memecahkan masalah rekapitulasi manual.</p>
+          </div>
+        </div>
+        <!-- Timeline Item 4 -->
+        <div class="timeline__item reveal reveal--delay-3">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__date">2025</div>
+            <h3 class="timeline__title">Menjalani Program Magang</h3>
+            <p class="timeline__desc">Terjun langsung ke industri dan bekerja dalam tim untuk membangun sistem informasi berskala nyata.</p>
+          </div>
+        </div>
+        <!-- Timeline Item 5 -->
+        <div class="timeline__item reveal reveal--delay-4">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__date">2024</div>
+            <h3 class="timeline__title">Mengembangkan Proyek Akademik Pertama</h3>
+            <p class="timeline__desc">Menerapkan pemahaman dasar algoritma dan basis data ke dalam sistem perangkat lunak yang utuh.</p>
+          </div>
+        </div>
+        <!-- Timeline Item 6 -->
+        <div class="timeline__item reveal reveal--delay-5">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__date">2022</div>
+            <h3 class="timeline__title">Memulai Perkuliahan Informatika</h3>
+            <p class="timeline__desc">Menyelami dasar-dasar pemrograman, logika komputasi, dan arsitektur sistem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Proyek</span>
+        <h2 class="section-title">Karya <span class="gradient-text">Terbaru</span></h2>
+        <p class="section-desc">Beberapa proyek terbaik yang telah saya kerjakan.</p>
+      </div>
+      <div class="projects__filter reveal">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="sistem-informasi">Sistem Informasi</button>
+        <button class="filter-btn" data-filter="web-development">Web Development</button>
+        <button class="filter-btn" data-filter="academic">Academic Project</button>
+        <button class="filter-btn" data-filter="real-time">Real-Time System</button>
+      </div>
+      <div class="projects__grid">
+        <!-- Project 1 -->
+        <div class="project-card reveal" data-category="sistem-informasi">
+          <div class="project-card__image">
+            <span class="project-card__image-placeholder"><i class="fa-solid fa-qrcode"></i></span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__header">
+              <span class="project-card__category">Sistem Informasi</span>
+              <span class="project-card__status success">Selesai</span>
+            </div>
+            <h3 class="project-card__title">Sistem Presensi Magang Berbasis Barcode</h3>
+            <p class="project-card__desc">Sistem presensi untuk peserta magang menggunakan barcode guna mempercepat proses absensi dan mengurangi kesalahan pencatatan.</p>
+            
+            <div class="project-card__details">
+              <div class="detail-block">
+                <h4><i class="fa-solid fa-triangle-exclamation"></i> Tantangan</h4>
+                <p>Proses absensi manual sering menyebabkan antrean panjang, rentan kesalahan, dan menyita banyak waktu rekapitulasi.</p>
+              </div>
+              <div class="detail-block">
+                <h4><i class="fa-solid fa-lightbulb"></i> Solusi</h4>
+                <p>Mengintegrasikan scanner barcode dengan Laravel untuk mencatat kehadiran secara langsung (real-time) ke dalam database.</p>
+              </div>
+            </div>
+
+            <div class="project-card__techs">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Bootstrap</span>
+              <span class="tech-tag">Barcode Scanner</span>
+            </div>
+            
+            <div class="project-card__actions">
+              <a href="#" class="btn-sm"><i class="fa-solid fa-circle-info"></i> Detail</a>
+              <a href="#" class="btn-sm"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-sm btn-sm--primary"><i class="fa-solid fa-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal reveal--delay-1" data-category="web-development">
+          <div class="project-card__image">
+            <span class="project-card__image-placeholder"><i class="fa-solid fa-cash-register"></i></span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__header">
+              <span class="project-card__category">Web Development</span>
+              <span class="project-card__status success">Selesai</span>
+            </div>
+            <h3 class="project-card__title">Sistem Point of Sale (POS)</h3>
+            <p class="project-card__desc">Sistem kasir yang mendukung transaksi penjualan, pengelolaan produk, laporan penjualan, serta monitoring stok.</p>
+            
+            <div class="project-card__details">
+              <div class="detail-block">
+                <h4><i class="fa-solid fa-triangle-exclamation"></i> Tantangan</h4>
+                <p>Kasir sering kesulitan memproses transaksi dengan cepat saat jam sibuk dan pembaruan stok lambat.</p>
+              </div>
+              <div class="detail-block">
+                <h4><i class="fa-solid fa-lightbulb"></i> Solusi</h4>
+                <p>Menggunakan antarmuka JavaScript responsif untuk checkout cepat dan sinkronisasi pemotongan stok otomatis di backend.</p>
+              </div>
+            </div>
+
+            <div class="project-card__techs">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+            
+            <div class="project-card__actions">
+              <a href="#" class="btn-sm"><i class="fa-solid fa-circle-info"></i> Detail</a>
+              <a href="#" class="btn-sm"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-sm btn-sm--primary"><i class="fa-solid fa-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal reveal--delay-2" data-category="academic">
+          <div class="project-card__image">
+            <span class="project-card__image-placeholder"><i class="fa-solid fa-graduation-cap"></i></span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__header">
+              <span class="project-card__category">Academic Project</span>
+              <span class="project-card__status progress">Dalam Pengembangan</span>
+            </div>
+            <h3 class="project-card__title">Sistem Informasi Tugas Akhir (SITA)</h3>
+            <p class="project-card__desc">Sistem yang membantu proses pengajuan judul, penentuan dosen pembimbing, monitoring progres, dan administrasi tugas akhir mahasiswa.</p>
+            
+            <div class="project-card__details">
+              <div class="detail-block">
+                <h4><i class="fa-solid fa-triangle-exclamation"></i> Tantangan</h4>
+                <p>Birokrasi manual tidak transparan, membuat mahasiswa kesulitan memantau status dokumen pengajuan judul mereka.</p>
+              </div>
+              <div class="detail-block">
+                <h4><i class="fa-solid fa-lightbulb"></i> Solusi</h4>
+                <p>Membangun portal terpusat dengan fitur timeline tracking dan notifikasi status persetujuan yang jelas antar peran.</p>
+              </div>
+            </div>
+
+            <div class="project-card__techs">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            
+            <div class="project-card__actions">
+              <a href="#" class="btn-sm"><i class="fa-solid fa-circle-info"></i> Detail</a>
+              <a href="#" class="btn-sm"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-sm btn-sm--primary"><i class="fa-solid fa-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="project-card reveal reveal--delay-3" data-category="real-time">
+          <div class="project-card__image">
+            <span class="project-card__image-placeholder"><i class="fa-solid fa-satellite-dish"></i></span>
+            <div class="project-card__badge-live">LIVE PROJECT</div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__header">
+              <span class="project-card__category">Real-Time System</span>
+              <span class="project-card__status success">Telah Diluncurkan</span>
+            </div>
+            <h3 class="project-card__title">SKJ – Sistem Real-Time</h3>
+            <p class="project-card__desc">Sistem yang telah digunakan secara nyata dan mampu melakukan sinkronisasi data secara real-time untuk mendukung operasional pengguna.</p>
+            
+            <div class="project-card__details">
+              <div class="detail-block">
+                <h4><i class="fa-solid fa-bolt"></i> Performa</h4>
+                <p>Mendukung sinkronisasi data berkecepatan tinggi tanpa *delay* yang berarti untuk komunikasi instan.</p>
+              </div>
+            </div>
+
+            <div class="project-card__techs">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">WebSocket</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+            
+            <div class="project-card__actions">
+              <a href="#" class="btn-sm"><i class="fa-solid fa-circle-info"></i> Detail</a>
+              <a href="#" class="btn-sm"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-sm btn-sm--primary"><i class="fa-solid fa-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal reveal--delay-4" data-category="sistem-informasi">
+          <div class="project-card__image">
+            <span class="project-card__image-placeholder"><i class="fa-solid fa-utensils"></i></span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__header">
+              <span class="project-card__category">Sistem Informasi</span>
+              <span class="project-card__status success">Selesai</span>
+            </div>
+            <h3 class="project-card__title">Sistem Informasi Rumah Makan</h3>
+            <p class="project-card__desc">Sistem informasi terintegrasi untuk mengelola operasional rumah makan secara komprehensif.</p>
+            
+            <div class="project-card__details">
+              <div class="detail-block">
+                <h4><i class="fa-solid fa-list-check"></i> Fitur Utama</h4>
+                <p>• Presensi karyawan<br>• Penggajian<br>• Reservasi pelanggan<br>• Dashboard admin</p>
+              </div>
+            </div>
+
+            <div class="project-card__techs">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+            
+            <div class="project-card__actions">
+              <a href="#" class="btn-sm"><i class="fa-solid fa-circle-info"></i> Detail</a>
+              <a href="#" class="btn-sm"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-sm btn-sm--primary"><i class="fa-solid fa-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card reveal reveal--delay-5" data-category="sistem-informasi">
+          <div class="project-card__image">
+            <span class="project-card__image-placeholder"><i class="fa-solid fa-users-gear"></i></span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__header">
+              <span class="project-card__category">Sistem Informasi</span>
+              <span class="project-card__status progress">Dalam Pengembangan</span>
+            </div>
+            <h3 class="project-card__title">Sistem HRM Rumah Makan</h3>
+            <p class="project-card__desc">Sistem Human Resource Management untuk mengelola data pegawai, perhitungan gaji komprehensif, serta kehadiran.</p>
+            
+            <div class="project-card__details">
+              <div class="detail-block">
+                <h4><i class="fa-solid fa-list-check"></i> Fitur Utama</h4>
+                <p>• Manajemen shift & Presensi<br>• Perhitungan gaji otomatis (Full-time & Part-time)<br>• Insentif tambahan<br>• Dashboard HR</p>
+              </div>
+            </div>
+
+            <div class="project-card__techs">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            
+            <div class="project-card__actions">
+              <a href="#" class="btn-sm"><i class="fa-solid fa-circle-info"></i> Detail</a>
+              <a href="#" class="btn-sm"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-sm btn-sm--primary"><i class="fa-solid fa-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATES SECTION ========== -->
+  <section id="certificates">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Pencapaian</span>
+        <h2 class="section-title">Galeri <span class="gradient-text">Sertifikat</span></h2>
+        <p class="section-desc">Pengakuan atas kompetensi dan partisipasi aktif dalam pengembangan skill.</p>
+      </div>
+      <div class="cert__grid">
+        <div class="cert-item reveal" data-img="https://placehold.co/800x600/4f46e5/ffffff?text=Sertifikat+1">
+          <img src="https://placehold.co/400x300/4f46e5/ffffff?text=Sertifikat+1" alt="Sertifikat 1">
+          <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="cert-item reveal reveal--delay-1" data-img="https://placehold.co/800x600/ec4899/ffffff?text=Sertifikat+2">
+          <img src="https://placehold.co/400x300/ec4899/ffffff?text=Sertifikat+2" alt="Sertifikat 2">
+          <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="cert-item reveal reveal--delay-2" data-img="https://placehold.co/800x600/06b6d4/ffffff?text=Sertifikat+3">
+          <img src="https://placehold.co/400x300/06b6d4/ffffff?text=Sertifikat+3" alt="Sertifikat 3">
+          <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Certificates -->
+  <div id="certModal" class="modal">
+    <span class="modal__close">&times;</span>
+    <img class="modal__content" id="modalImage" alt="Sertifikat Enalrged">
+  </div>
+
+  <!-- ========== TESTIMONIALS SECTION ========== -->
+  <section id="testimonials" class="bg-alternate">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Testimoni</span>
+        <h2 class="section-title">Apa Kata <span class="gradient-text">Mereka</span></h2>
+        <p class="section-desc">Kesan dan pesan dari orang-orang yang pernah bekerja sama dengan saya.</p>
+      </div>
+      <div class="testimonial__slider reveal">
+        <div class="testimonial__track" id="testiTrack">
+          <!-- Slide 1 -->
+          <div class="testimonial__slide active">
+            <div class="testi-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="testi-text">"Fifel adalah mahasiswa yang sangat berdedikasi. Kemampuannya menerjemahkan logika kompleks ke dalam kode yang rapi sangat membantu dalam pengembangan proyek akademik."</p>
+            <h4 class="testi-name">Dr. Budi Santoso</h4>
+            <span class="testi-role">Dosen Pembimbing</span>
+          </div>
+          <!-- Slide 2 -->
+          <div class="testimonial__slide">
+            <div class="testi-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="testi-text">"Sangat mudah bekerja sama dengannya di dalam tim. Dia memiliki pemahaman kuat di backend (Laravel) sekaligus desain yang baik di frontend."</p>
+            <h4 class="testi-name">Andi Setiawan</h4>
+            <span class="testi-role">Rekan Tim Proyek SITA</span>
+          </div>
+          <!-- Slide 3 -->
+          <div class="testimonial__slide">
+            <div class="testi-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="testi-text">"Selama masa magang, sistem presensi barcode yang dibangunnya telah merevolusi cara kami mendata peserta. Sangat efisien dan minim *bug*."</p>
+            <h4 class="testi-name">Siti Aminah</h4>
+            <span class="testi-role">Supervisor HR Magang</span>
+          </div>
+        </div>
+        <div class="testimonial__indicators">
+          <span class="indicator active" data-slide="0"></span>
+          <span class="indicator" data-slide="1"></span>
+          <span class="indicator" data-slide="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Kontak</span>
+        <h2 class="section-title">Mari <span class="gradient-text">Berkolaborasi</span></h2>
+        <p class="section-desc">Punya proyek menarik atau sekadar ingin menyapa? Jangan ragu untuk menghubungi saya.</p>
+      </div>
+      <div class="contact__content">
+        <div class="contact__info reveal">
+          <h3>Ayo, Kita Wujudkan Ide Anda!</h3>
+          <p>
+            Saya selalu terbuka untuk peluang baru, proyek freelance,
+            atau sekadar diskusi tentang teknologi dan desain. Silakan
+            hubungi saya melalui form atau channel di bawah ini.
+          </p>
+          <div class="contact__channels">
+            <div class="contact-channel">
+              <div class="contact-channel__icon"><i class="fa-regular fa-envelope"></i></div>
+              <div class="contact-channel__info">
+                <div class="label">Email</div>
+                <div class="value">hello@fifel.dev</div>
+              </div>
+            </div>
+            <div class="contact-channel">
+              <div class="contact-channel__icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="contact-channel__info">
+                <div class="label">WhatsApp</div>
+                <div class="value">+62 812 xxxx xxxx</div>
+              </div>
+            </div>
+            <div class="contact-channel">
+              <div class="contact-channel__icon"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div class="contact-channel__info">
+                <div class="label">LinkedIn</div>
+                <div class="value">linkedin.com/in/fifel</div>
+              </div>
+            </div>
+            <div class="contact-channel">
+              <div class="contact-channel__icon"><i class="fa-brands fa-github"></i></div>
+              <div class="contact-channel__info">
+                <div class="label">GitHub</div>
+                <div class="value">github.com/fifel</div>
+              </div>
+            </div>
+            <div class="contact-channel">
+              <div class="contact-channel__icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-channel__info">
+                <div class="label">Lokasi</div>
+                <div class="value">Indonesia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact__form-card reveal reveal--delay-1">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subjek</label>
+              <input type="text" id="subject" name="subject" placeholder="Tentang apa?" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" placeholder="Tuliskan pesan Anda..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--submit">
+              Kirim Pesan
+              <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i>
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="icon"><i class="fa-regular fa-circle-check"></i></div>
+            <h4>Pesan Terkirim!</h4>
+            <p>Terima kasih telah menghubungi saya. Saya akan membalas secepat mungkin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <a href="#hero" class="footer__logo">&lt;Fifel/&gt;</a>
+        <div class="footer__links">
+          <a href="#about" class="footer__link">Tentang</a>
+          <a href="#skills" class="footer__link">Keahlian</a>
+          <a href="#projects" class="footer__link">Proyek</a>
+          <a href="#contact" class="footer__link">Kontak</a>
+        </div>
+        <div class="footer__socials">
+          <a href="#" class="social-link" aria-label="GitHub" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter" title="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="currentYear"></span> Fifel. Dibuat dengan <span class="heart"><i class="fa-solid fa-heart"></i></span> dan secangkir kopi</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
