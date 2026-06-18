@@ -753,14 +753,16 @@ section {
   position: relative;
 }
 
-.hero__avatar-placeholder {
-  font-family: var(--font-heading);
-  font-size: 6rem;
-  font-weight: 900;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.hero__profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* Fokus ke bagian setengah atas gambar */
+  transition: transform var(--transition-medium);
+}
+
+.hero__profile-img:hover {
+  transform: scale(1.05);
 }
 
 /* Floating skill badges around avatar */
